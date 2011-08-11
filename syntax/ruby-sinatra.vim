@@ -19,7 +19,7 @@ endif
 
 syntax keyword rubyInclude   use register helpers
 syntax keyword rubyAttribute set enable disable
-syntax match   rubyControl   "\<\%(get\|put\|post\|delete\)\>[?!]\@!"
+syntax match   rubyControl   "\<\%(aget\|get\|aput\|put\|apost\|post\|adelete\|delete\)\>[?!]\@!"
 "syntax match rubyControl     "\<\%(set\|enable\|disable\)\>[?!]\@!"
 "syntax match rubyControl     "\<\%(register\|use\)\>[?!]\@!"
 syntax match   rubyControl   "\<\%(configure\|before\|after\)\>[?!]\@!"
@@ -27,7 +27,7 @@ syntax match   rubyControl   "\<\%(configure\|before\|after\)\>[?!]\@!"
 "syntax region  rubyDoBlock matchgroup=rubyHelpers start="\<do\>" end="\<end\>" contains=ALLBUT,@rubyNotTop fold
 
 " Note: the following statements was extracted from the original Ruby syntax file for a hack that prevent wrong 'keywords'.
-syn match rubyKeywordAsMethod "\%(\%(\.\@<!\.\)\|::\)\_s*\%(get\|put\|post\|delete\|\)\>"       transparent contains=NONE
+syn match rubyKeywordAsMethod "\%(\%(\.\@<!\.\)\|::\)\_s*\%(aget\|get\|aput\|put\|apost\|post\|adelete\|delete\|\)\>"       transparent contains=NONE
 syn match rubyKeywordAsMethod "\%(\%(\.\@<!\.\)\|::\)\_s*\%(set\|enable\|disable\|template\)\>" transparent contains=NONE
 syn match rubyKeywordAsMethod "\%(\%(\.\@<!\.\)\|::\)\_s*\%(register\|helpers\|use\)\>"         transparent contains=NONE
 
